@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('IBM Plex Sans Light'), local('IBMPlexSans-Light'),
+    url(/assets/fonts/IBMPlexSans-light-latin-ext.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: local('IBM Plex Mono Light'), local('IBMPlexMono-Light'),
+    url(/assets/fonts/IBMPlexMono-light-latin-ext.woff2) format('woff2');
+}
+
+img {
+  width: 100%;
+}
+
+.navbar-props {
+  width: 100%;
+  position: fixed;
+}
+
+#navbar-gradient {
+  height: 150px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    rgba(255, 255, 255, 0.35) 70%,
+    transparent 100%
+  );
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  font-family: 'IBM Plex Mono';
+  font-size: 12px;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 390px;
+}
+
+#navbar div {
+  width: calc(100% / 7);
+  text-align: center;
+  cursor: pointer;
+}
+
+#navbar div:hover {
+  color: #8034fc;
+  transition: color 0.2s ease-in-out;
+}
+
+button {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+}
+
+#theme-indicator {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  top: 30px;
+  text-align: left;
+  color: rgb(150, 150, 150);
+}
+
+button:hover #theme-indicator {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#theme-switch {
+  width: 30px;
+  font-family: 'IBM Plex Sans';
+}
