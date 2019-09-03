@@ -24,6 +24,10 @@ img {
   width: 100%;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .navbar-props {
   width: 100%;
   position: fixed;
@@ -95,4 +99,22 @@ button:hover #theme-indicator {
 #theme-switch {
   width: 30px;
   font-family: 'IBM Plex Sans';
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

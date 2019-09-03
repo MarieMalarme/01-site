@@ -2,6 +2,7 @@ const themeSwitch = document.getElementById('theme-switch')
 const image = document.getElementById('image')
 const logo = document.getElementById('logo')
 const navbarGradient = document.getElementById('navbar-gradient')
+const navbar = document.getElementById('navbar')
 const body = document.querySelector('body')
 const switchIcon = document.getElementById('switch-icon')
 const switchText = document.getElementById('switch-text')
@@ -23,5 +24,19 @@ themeSwitch.addEventListener('click', () => {
     navbarGradient.style.background = `linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0.35) 70%, transparent 100%)`
     switchIcon.src = `img/01-icon-dark.svg`
     switchText.innerHTML = `Dark`
+  }
+})
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    navbar.classList.add('fade-in')
+    navbarGradient.classList.add('fade-in')
+    navbar.classList.remove('hidden')
+    navbarGradient.classList.remove('hidden')
+  } else {
+    navbar.classList.remove('fade-in')
+    navbarGradient.classList.remove('fade-in')
+    navbar.classList.add('hidden')
+    navbarGradient.classList.add('hidden')
   }
 })
